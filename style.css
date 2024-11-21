@@ -1,0 +1,16 @@
+/*
+Theme Name: Law4Minor
+Theme URI: https://law4minor.org
+Author: Slimer0210
+Author URI: https://slimer.dev
+Description: Theme for Law4Minor
+Version: 1.0
+License: GNU General Public License v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+@import url('assets/css/config.css');
+@import url('assets/css/libs.css');
+@import url('assets/css/responsive.css');
+@import url('assets/css/stg.css');
+@import url('assets/css/style.css');
+@import url('assets/css/tmp.css');
