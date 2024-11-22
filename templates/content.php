@@ -11,7 +11,7 @@
                     <div class="bringer-hero-media-wrap">
                         <div class="bringer-parallax-media" data-appear="fade-down" data-unload="fade-up">
                             <?php
-                            $hero_image_url = get_template_directory_uri() . '/assets/img/home-1.webp'; // Default image fallback
+                            $hero_image_url = get_template_directory_uri() . '/assets/img/home-1.webp';
                             ?>
                             <img class="bringer-lazy" data-src="<?php echo esc_url( $hero_image_url ); ?>" alt="Hero Image" width="1920" height="960" loading="lazy">
                         </div>

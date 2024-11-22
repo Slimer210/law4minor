@@ -70,27 +70,28 @@ get_header();
 
                     <!-- Contacts -->
                     <div class="bringer-member-contacts">
-                        <?php
-                        $email = get_post_meta(get_the_ID(), 'email', true);
-                        $phone = get_post_meta(get_the_ID(), 'phone', true);
-                        ?>
-                        <div class="bringer-member-contacts-list">
-                            <?php if ($email): ?>
-                                <a href="mailto:<?php echo esc_html($email); ?>" class="in-view">
-                                    <?php echo esc_html($email); ?>
-                                </a>
-                            <?php else: ?>
-                                <p>No email provided</p>
-                            <?php endif; ?>
+                    <?php
+                        $email = get_field('team-email');
+                        $phone = get_field('team-phone');
+                    ?>
+                    <div class="bringer-member-contacts-list">
+                        <?php if ($email): ?>
+                            <a href="mailto:<?php echo esc_html($email); ?>" class="in-view">
+                                <?php echo esc_html($email); ?>
+                            </a>
+                        <?php else: ?>
+                            <p>No email provided</p>
+                        <?php endif; ?>
 
-                            <?php if ($phone): ?>
-                                <a href="tel:+<?php echo esc_html($phone); ?>" data-delay="100" class="in-view">
-                                    <?php echo esc_html($phone); ?>
-                                </a>
-                            <?php else: ?>
-                                <p>No phone number provided</p>
-                            <?php endif; ?>
-                        </div>
+                        <?php if ($phone): ?>
+                            <a href="tel:+<?php echo esc_html($phone); ?>" data-delay="100" class="in-view">
+                                <?php echo esc_html($phone); ?>
+                            </a>
+                        <?php else: ?>
+                            <p>No phone number provided</p>
+                        <?php endif; ?>
+                    </div>
+
 
                         <ul class="bringer-socials-list" data-stagger-appear="fade-up">
                             <?php
