@@ -21,11 +21,7 @@ get_header(); ?>
             ?>
             <section class="divider-bottom">
                 <div class="bringer-parallax-media stg-bottom-gap-l is-init in-view" data-delay="200" data-unload="fade-up">
-                    <section class="divider-bottom">
-                        <div class="bringer-parallax-media stg-bottom-gap-l is-init in-view" data-delay="200" data-unload="fade-up">
-                            <div class="st-lazy-wrapper is-loaded stop-anim"><img src="<?php echo esc_url( $about_us_img_url ); ?>" data-src="<?php echo esc_url( $about_us_img_url ); ?>" alt="About Law4Minor" width="1920" height="960" style="transform-origin: 50% 50% 0px; transform: translateY(-60px) scale(1.1);"></div>
-                        </div>
-                    </section>
+                    <div class="st-lazy-wrapper is-loaded stop-anim"><img src="<?php echo esc_url( $about_us_img_url ); ?>" data-src="<?php echo esc_url( $about_us_img_url ); ?>" alt="About Law4Minor" width="1920" height="960" style="transform-origin: 50% 50% 0px; transform: translateY(-60px) scale(1.1);"></div>
                 </div>
                 
 
@@ -42,7 +38,7 @@ get_header(); ?>
                 </div>
             </section>
             <!-- Section: Team -->
-            <section>
+            <section class="divider-bottom">
                 <div class="stg-row bringer-section-title">
                     <div class="stg-col-8 stg-offset-2 stg-tp-col-10 stg-tp-offset-1">
                         <div class="align-center">
@@ -96,9 +92,9 @@ get_header(); ?>
             </section>
 
             <!-- Section: Services -->
-            <section class="backlight-bottom divider-top">
+            <section class="backlight-bottom">
                 <!-- Section Intro -->
-                <div class="stg-row stg-large-gap stg-bottom-gap-l">
+                <div class="stg-row stg-bottom-gap-l">
                     <div class="stg-col-6 stg-tp-col-8 stg-tp-bottom-gap-l" data-unload="fade-left">
                         <h2 data-split-appear="fade-up">What We Do</h2>
                     </div>
