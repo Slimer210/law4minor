@@ -2,7 +2,7 @@
 get_header(); // Load the header
 ?>
 
-<main id="bringer-main">
+<main id="lm-main">
     <div class="stg-container">
 
         <?php if ( have_posts() ) : // Start the loop ?>
@@ -16,7 +16,7 @@ get_header(); // Load the header
                             <div class="featured-image">
                                 <?php
                                 if ( has_post_thumbnail() ) : 
-                                    the_post_thumbnail('large', ['class' => 'bringer-featured-img', 'alt' => get_the_title()]);
+                                    the_post_thumbnail('large', ['class' => 'lm-featured-img', 'alt' => get_the_title()]);
                                 endif;
                                 ?>
                             </div> <!-- Featured Image -->
@@ -24,17 +24,17 @@ get_header(); // Load the header
 
                     </div>
         
-                    <div class="bringer-hero-info-line" data-stagger-appear="fade-up" data-delay="200" data-unload="fade-up">
-                        <div class="bringer-meta in-view" data-delay="200" data-unload="none" data-threshold="0.5">
+                    <div class="lm-hero-info-line" data-stagger-appear="fade-up" data-delay="200" data-unload="fade-up">
+                        <div class="lm-meta in-view" data-delay="200" data-unload="none" data-threshold="0.5">
                             Date: <span><?php echo get_the_date(); ?></span> <!-- Post Date -->
                         </div>
-                        <div class="bringer-meta in-view" data-delay="250" data-unload="none" data-threshold="0.5">
+                        <div class="lm-meta in-view" data-delay="250" data-unload="none" data-threshold="0.5">
                             Author: <span><?php the_author(); ?></span> <!-- Post Author -->
                         </div>
-                        <div class="bringer-meta in-view" data-delay="300" data-unload="none" data-threshold="0.5">
+                        <div class="lm-meta in-view" data-delay="300" data-unload="none" data-threshold="0.5">
                             Category: <span><?php the_category( ', ' ); ?></span> <!-- Post Category -->
                         </div>
-                    </div><!-- .bringer-hero-info-line -->
+                    </div><!-- .lm-hero-info-line -->
                 </section>
         
                 <div class="post-content stg-top-gap-l stg-bottom-gap-l" >
@@ -66,15 +66,15 @@ get_header(); // Load the header
             <div class="stg-col-5 stg-tp-bottom-gap in-view" data-unload="fade-left">
                 <?php if ($previous_post) : ?>
                     <div class="align-center" data-unload="zoom-in">
-                        <a href="<?php echo esc_url($previous_post_url); ?>" class="bringer-icon-link bringer-next-post stg-col">
-                            <div class="bringer-icon-link-content">
+                        <a href="<?php echo esc_url($previous_post_url); ?>" class="lm-icon-link lm-next-post stg-col">
+                            <div class="lm-icon-link-content">
                                 <h6>Previous Project</h6>
                                 <h4><?php echo esc_html($previous_post_title); ?></h4>
                             </div>
                             <div>
-                                <i class="bringer-icon bringer-icon-explore"></i>
+                                <i class="lm-icon lm-icon-explore"></i>
                             </div>
-                        </a><!-- .bringer-icon-link -->
+                        </a><!-- .lm-icon-link -->
                     </div>
                 <?php endif; ?>
             </div>
@@ -84,15 +84,15 @@ get_header(); // Load the header
                 <?php if ($next_post) : ?>
                     <div class="featured-image">
                         <div class="align-center" data-unload="zoom-in">
-                            <a href="<?php echo esc_url($next_post_url); ?>" class="bringer-icon-link bringer-next-post">
-                                <div class="bringer-icon-link-content">
+                            <a href="<?php echo esc_url($next_post_url); ?>" class="lm-icon-link lm-next-post">
+                                <div class="lm-icon-link-content">
                                     <h6>Next Project</h6>
                                     <h4><?php echo esc_html($next_post_title); ?></h4>
                                 </div>
                                 <div >
-                                    <i class="bringer-icon bringer-icon-explore"></i>
+                                    <i class="lm-icon lm-icon-explore"></i>
                                 </div>
-                            </a><!-- .bringer-icon-link -->
+                            </a><!-- .lm-icon-link -->
                         </div>
                     </div>
                 <?php endif; ?>

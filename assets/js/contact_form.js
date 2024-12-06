@@ -4,7 +4,7 @@
  */
 "use strict";
 
-function Bringer_Contact_Form() {
+function LM_Contact_Form() {
     // Form Fields
     if ( jQuery('input[name]:not(.is-init), textarea[name]:not(.is-init)').length ) {
         jQuery('input[name]:not(.is-init), textarea[name]:not(.is-init)').each(function() {
@@ -19,10 +19,10 @@ function Bringer_Contact_Form() {
     }
 
     // Contact Form
-    if ( jQuery('.bringer-contact-form:not(.is-init)').length ) {
-        jQuery('.bringer-contact-form:not(.is-init)').each(function() {
+    if ( jQuery('.lm-contact-form:not(.is-init)').length ) {
+        jQuery('.lm-contact-form:not(.is-init)').each(function() {
             let $form = jQuery(this),
-                $response = $form.find('.bringer-contact-form__response'),
+                $response = $form.find('.lm-contact-form__response'),
                 formData;
 
             $response.slideUp(1);
@@ -44,7 +44,7 @@ function Bringer_Contact_Form() {
                 })
                 .done(function(response) {
                     $form.removeClass('is-busy');
-                    $response.empty().removeClass('bringer-alert-danger').addClass('bringer-alert-success').slideDown(200);
+                    $response.empty().removeClass('lm-alert-danger').addClass('lm-alert-success').slideDown(200);
                     $response.html('<span>' + response + '</span>');
                     $form.find('input:not([type="submit"]), textarea').val('');
                     setTimeout(function() {
@@ -55,7 +55,7 @@ function Bringer_Contact_Form() {
                 })
                 .fail(function(data) {
                     $form.removeClass('is-busy');
-                    $response.empty().removeClass('bringer-alert-success').addClass('bringer-alert-danger').slideDown(200);
+                    $response.empty().removeClass('lm-alert-success').addClass('lm-alert-danger').slideDown(200);
                     $response.html('<span>' + data.responseText + '</span>');
                     $form.addClass('is-error');
                     setTimeout(function() {

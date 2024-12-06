@@ -1,7 +1,7 @@
 <?php
 get_header(); 
 ?>
-<main id="bringer-main">
+<main id="lm-main">
     <div class="stg-container">
         <section>
             <div class="stg-row stg-large-gap">
@@ -54,9 +54,9 @@ get_header();
                                     $role = get_post_meta(get_the_ID(), 'role', true);
                                     $bio = get_the_content();
                                     ?>
-                                    <div class="bringer-title-with-label stg-bottom-gap">
+                                    <div class="lm-title-with-label stg-bottom-gap">
                                         <h1 class="in-view"><?php echo esc_html($name); ?></h1>
-                                        <span class="bringer-label in-view" data-delay="100"><?php echo esc_html($role); ?></span>
+                                        <span class="lm-label in-view" data-delay="100"><?php echo esc_html($role); ?></span>
                                     </div>
                                     <article class="in-view" data-delay="150"><?php echo wp_kses_post($bio); ?></article>
                                 <?php endwhile;
@@ -69,12 +69,12 @@ get_header();
                     </div>
 
                     <!-- Contacts -->
-                    <div class="bringer-member-contacts">
+                    <div class="lm-member-contacts">
                     <?php
                         $email = get_field('team-email');
                         $phone = get_field('team-phone');
                     ?>
-                    <div class="bringer-member-contacts-list">
+                    <div class="lm-member-contacts-list">
                         <?php if ($email): ?>
                             <a href="mailto:<?php echo esc_html($email); ?>" class="in-view">
                                 <?php echo esc_html($email); ?>
@@ -93,7 +93,7 @@ get_header();
                     </div>
 
 
-                        <ul class="bringer-socials-list" data-stagger-appear="fade-up">
+                        <ul class="lm-socials-list" data-stagger-appear="fade-up">
                             <?php
                             $facebook = get_field('facebook');
                             $instagram = get_field('instagram');
@@ -102,7 +102,7 @@ get_header();
 
                             if ($facebook): ?>
                                 <li class="in-view" data-delay="0" data-unload="none" data-threshold="0.5">
-                                    <a href="<?php echo esc_url($facebook); ?>" class="bringer-socials-facebook">
+                                    <a href="<?php echo esc_url($facebook); ?>" class="lm-socials-facebook">
                                         <i></i>
                                     </a>
                                 </li>
@@ -110,7 +110,7 @@ get_header();
 
                             <?php if ($instagram): ?>
                                 <li class="in-view" data-delay="50" data-unload="none" data-threshold="0.5">
-                                    <a href="<?php echo esc_url($instagram); ?>" class="bringer-socials-instagram">
+                                    <a href="<?php echo esc_url($instagram); ?>" class="lm-socials-instagram">
                                         <i></i>
                                     </a>
                                 </li>
@@ -118,7 +118,7 @@ get_header();
 
                             <?php if ($behance): ?>
                                 <li class="in-view" data-delay="0" data-unload="none" data-threshold="0.5">
-                                    <a href="<?php echo esc_url($behance); ?>" class="bringer-socials-behance">
+                                    <a href="<?php echo esc_url($behance); ?>" class="lm-socials-behance">
                                         <i></i>
                                     </a>
                                 </li>
@@ -126,7 +126,7 @@ get_header();
 
                             <?php if ($dribbble): ?>
                                 <li class="in-view" data-delay="50" data-unload="none" data-threshold="0.5">
-                                    <a href="<?php echo esc_url($dribbble); ?>" class="bringer-socials-dribbble">
+                                    <a href="<?php echo esc_url($dribbble); ?>" class="lm-socials-dribbble">
                                         <i></i>
                                     </a>
                                 </li>

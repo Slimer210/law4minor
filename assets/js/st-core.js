@@ -1,22 +1,16 @@
-/**
- * Author: Shadow Themes
- * Author URL: https://shadow-themes.com
- */
 "use strict";
-const PREFIX = 'bringer';
+const PREFIX = 'lm';
 
 class ST_Core {
     constructor( o = {} )  {
         const _self = this;
 
-        // Specify Options
         this.cfg = Object.assign({
-            // Main Logo Size
             logo_size: {
                 w: 88,
                 h: 24
             },
-            // Interractive Cursor
+            // Interactive Cursor
             iCursor: {
                 state: false,
                 cursorHover: '.not-specified-class',

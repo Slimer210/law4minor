@@ -1,78 +1,73 @@
-/**
- * Author: Shadow Themes
- * Author URL: https://shadow-themes.com
- */
-
 /* ============
    COLOR SCHEME
 =============== */
 :root {
     /* Used as body background and overlays */
-    --bringer-s-body-bg: #07090D;
+    --lm-s-body-bg: #07090D;
 
     /* Used as a background color for header, footer, and mobile navigation */
-    --bringer-s-nav: #07090DCC;
+    --lm-s-nav: #07090DCC;
 
     /* Used as a background color for block containers, sub-menus, and form inputs */
-    --bringer-s-container-bg: #1A1D24;
+    --lm-s-container-bg: #1A1D24;
 
     /* The same as the previous one but with transparency for frosted glass blocks */
-    --bringer-s-container-frosted: #1A1D24EE;
+    --lm-s-container-frosted: #1A1D24EE;
 
     /* Used as a color for headings, page titles, button labels, and other bright text accents */
-    --bringer-s-heading: #F5F7FA;
+    --lm-s-heading: #F5F7FA;
 
     /* It is the same as the previous one but with transparency. Used for labels, meta, and some hover effects */
-    --bringer-s-heading-fade: #F5F7FAC0;
+    --lm-s-heading-fade: #F5F7FAC0;
 
     /* Used as a color for general content */
-    --bringer-s-text: #C5C7CE;
+    --lm-s-text: #C5C7CE;
 
     /* A background color for accents, like buttons, highlighted blocks, etc. */
-    --bringer-s-accent: #3F6EE9;
+    --lm-s-accent: #3F6EE9;
 
     /* A hovered button background color */
-    --bringer-button-hover-bg: #3F6EE9D0;
+    --lm-button-hover-bg: #3F6EE9D0;
 
     /* Used as a color for text accents */
-    --bringer-s-text-accent: #5C9DFF;
+    --lm-s-text-accent: #5C9DFF;
 
     /* Used as a text color for accented blocks */
-    --bringer-s-accented-text: var(--bringer-s-heading);
+    --lm-s-accented-text: var(--lm-s-heading);
 
     /* Used as a primary border-color */
-    --bringer-s-border: #F5F7FA27;
+    --lm-s-border: #F5F7FA27;
 
     /* Used as a border color for accented blocks */
-    --bringer-s-border-accent: #5C9DFF80;
+    --lm-s-border-accent: #5C9DFF80;
     
     /* A default semi-transparent border color for blocks with a shining effect */
-    --bringer-s-border-mute: #F5F7FA0D;
+    --lm-s-border-mute: #F5F7FA0D;
 
     /* A semi-transparent border shining effect color */
-    --bringer-s-border-highlight: #F5F7FA40;
+    --lm-s-border-highlight: #F5F7FA40;
 
     /* Used as a color for a backlight effect */
-    --bringer-s-backlight: #F5F7FA12;
+    --lm-s-backlight: #F5F7FA12;
 
     /* Used as a color for block shadow */
-    --bringer-s-box-shadow: #07090D10;
+    --lm-s-box-shadow: #07090D10;
 
     /* The cursor-followed backlight color. It uses the primary backlight color */
-    --bringer-s-cursor-light: var(--bringer-s-backlight);
+    --lm-s-cursor-light: var(--lm-s-backlight);
     
     /* A horizontal side-fade gradient border color */
-    --bringer-c-border-gradient: linear-gradient(to left, transparent, var(--bringer-s-border), transparent); 
+    --lm-c-border-gradient: linear-gradient(to left, transparent, var(--lm-s-border), transparent); 
 
 
     /* Main menu text color */
-    --bringer-c-menu: var(--bringer-s-text);
+    --lm-c-menu: var(--lm-s-text);
     
     /* Main menu hovered item text color */
-    --bringer-c-menu-hover: var(--bringer-s-heading);
+    --lm-c-menu-hover: var(--lm-s-heading);
 
     /* Main menu current item text color */
-    --bringer-c-menu-active: var(--bringer-s-heading);
+    --lm-c-menu-active: var(--lm-s-heading);
 }
 
 /* ==========
@@ -81,166 +76,166 @@
 :root {
     /* === FONT GROUPS === */
     /* Headings Font Family */
-    --bringer-t-heading-ff: 'Inter', sans-serif;
+    --lm-t-heading-ff: 'Inter', sans-serif;
     
     /* Headings Font Weight */
-    --bringer-t-heading-fw: 600;
+    --lm-t-heading-fw: 600;
 
 
     /* Content Font Family */
-    --bringer-t-content-ff: 'Inter', sans-serif;
+    --lm-t-content-ff: 'Inter', sans-serif;
 
     /* Content Font Weight */
-    --bringer-t-content-fw: 400;
+    --lm-t-content-fw: 400;
 
     /* Content Font Letter Spacing */
-    --bringer-t-content-ls: -0.01em;
+    --lm-t-content-ls: -0.01em;
 
 
     /* === MAIN MENU === */
     /* Main Menu Font Family */
-    --bringer-t-menu-ff: var(--bringer-t-content-ff);
+    --lm-t-menu-ff: var(--lm-t-content-ff);
 
     /* Main Menu Font Weight */
-    --bringer-t-menu-fw: var(--bringer-t-content-fw);
+    --lm-t-menu-fw: var(--lm-t-content-fw);
 
     /* Main Menu Font Size */
-    --bringer-t-menu-fs: 14px;
+    --lm-t-menu-fs: 14px;
 
     /* Main Menu Line Height */
-    --bringer-t-menu-lh: 1.4em;
+    --lm-t-menu-lh: 1.4em;
 
     /* Sub-Menu Font Family */
-    --bringer-t-submenu-ff: var(--bringer-t-menu-ff);
+    --lm-t-submenu-ff: var(--lm-t-menu-ff);
 
     /* Main Menu Font Weight */
-    --bringer-t-submenu-fw: var(--bringer-t-menu-fw);
+    --lm-t-submenu-fw: var(--lm-t-menu-fw);
 
     /* Main Menu Font Size */
-    --bringer-t-submenu-fs: var(--bringer-t-menu-fs);
+    --lm-t-submenu-fs: var(--lm-t-menu-fs);
 
     /* Main Menu Line Heiight */
-    --bringer-t-submenu-lh: var(--bringer-t-menu-lh);
+    --lm-t-submenu-lh: var(--lm-t-menu-lh);
 
 
     /* === FOOTER === */
     /* Footer Font Size */
-    --bringer-t-footer-fs: 14px;
+    --lm-t-footer-fs: 14px;
 
     /* Footer Text Line Height */
-    --bringer-t-footer-lh: 1.4em;
+    --lm-t-footer-lh: 1.4em;
 
     /* Social Icons Size */
-    --bringer-socials-size: 24px;
+    --lm-socials-size: 24px;
 
 
     /* === HEADINGS === */
     /* H1 Heading font size */
-    --bringer-t-h1-fs: 80px;
+    --lm-t-h1-fs: 80px;
 
     /* H1 Heading letter spacing */
-    --bringer-t-h1-ls: -0.05em;
+    --lm-t-h1-ls: -0.05em;
 
     /* H1 Line Height */
-    --bringer-t-h1-lh: 1.1em;
+    --lm-t-h1-lh: 1.1em;
 
     /* H1 Margin */
-    --bringer-t-h1-margin: -0.175em 0 0.338em -0.063em;
+    --lm-t-h1-margin: -0.175em 0 0.338em -0.063em;
 
 
     /* H2 Heading font size */
-    --bringer-t-h2-fs: 56px;
+    --lm-t-h2-fs: 56px;
 
     /* H2 Heading letter spacing */
-    --bringer-t-h2-ls: -0.05em;
+    --lm-t-h2-ls: -0.05em;
 
     /* H2 Line Height */
-    --bringer-t-h2-lh: 1.2em;
+    --lm-t-h2-lh: 1.2em;
 
     /* H2 Margin */
-    --bringer-t-h2-margin: -0.232em 0 0.482em -0.06em;
+    --lm-t-h2-margin: -0.232em 0 0.482em -0.06em;
 
     /* H3 Heading font size */
-    --bringer-t-h3-fs: 40px;
+    --lm-t-h3-fs: 40px;
 
     /* H3 Heading letter spacing */
-    --bringer-t-h3-ls: -0.05em;
+    --lm-t-h3-ls: -0.05em;
     
     /* H3 Line Height */
-    --bringer-t-h3-lh: 1.2em;
+    --lm-t-h3-lh: 1.2em;
 
     /* H3 Margin */
-    --bringer-t-h3-margin: -0.215em 0 0.65em -0.05em;
+    --lm-t-h3-margin: -0.215em 0 0.65em -0.05em;
 
 
     /* H4 Heading font size */
-    --bringer-t-h4-fs: 32px;
+    --lm-t-h4-fs: 32px;
 
     /* H4 Heading letter spacing */
-    --bringer-t-h4-ls: -0.05em;
+    --lm-t-h4-ls: -0.05em;
 
     /* H4 Line Height */
-    --bringer-t-h4-lh: 1.2em;
+    --lm-t-h4-lh: 1.2em;
 
     /* H4 Margin */
-    --bringer-t-h4-margin: -0.22em 0 0.813em -0.05em;
+    --lm-t-h4-margin: -0.22em 0 0.813em -0.05em;
 
 
     /* H5 Heading font size */
-    --bringer-t-h5-fs: 26px;
+    --lm-t-h5-fs: 26px;
 
     /* H5 Heading letter spacing */
-    --bringer-t-h5-ls: -0.02em;
+    --lm-t-h5-ls: -0.02em;
 
     /* H5 Line Height */
-    --bringer-t-h5-lh: 1.2em;
+    --lm-t-h5-lh: 1.2em;
 
     /* H5 Margin */
-    --bringer-t-h5-margin: -0.19em 0 1em -0.06em;
+    --lm-t-h5-margin: -0.19em 0 1em -0.06em;
 
 
     /* H6 Heading font size */
-    --bringer-t-h6-fs: 20px;
+    --lm-t-h6-fs: 20px;
 
     /* H6 Heading letter spacing */
-    --bringer-t-h6-ls: -0.02em;
+    --lm-t-h6-ls: -0.02em;
                     
     /* H6 Line Height */
-    --bringer-t-h6-lh: 1.2em;
+    --lm-t-h6-lh: 1.2em;
 
     /* H6 Margin */
-    --bringer-t-h6-margin: -0.2em 0 1.2em -0.038em;
+    --lm-t-h6-margin: -0.2em 0 1.2em -0.038em;
 
 
     /* === CONTENT === */
     /* Content Large text Font Size */
-    --bringer-t-large-fs: 22px;
+    --lm-t-large-fs: 22px;
 
     /* Content text Font Size */
-    --bringer-t-content-fs: 16px;
+    --lm-t-content-fs: 16px;
 
     /* Content text Line Height */
-    --bringer-t-content-lh: 1.4em;
+    --lm-t-content-lh: 1.4em;
 
     /* Meta Font Size */
-    --bringer-t-meta-fs: 12px;
+    --lm-t-meta-fs: 12px;
 
     /* Meta Letter Spacing */
-    --bringer-t-meta-ls: 0.12em;
+    --lm-t-meta-ls: 0.12em;
 
     /* Meta Font Weight */
-    --bringer-t-meta-fw: 600;
+    --lm-t-meta-fw: 600;
 
     
     /* === FORMS AND FIELDS === */
     /* Button Font Size */
-    --bringer-t-button-fs: 15px;
+    --lm-t-button-fs: 15px;
 
     /* Input Font Size */
-    --bringer-t-input-fs: 14px;
+    --lm-t-input-fs: 14px;
 
     /* Input Line Height */
-    --bringer-t-input-lh: 1.4em;
+    --lm-t-input-lh: 1.4em;
 }
 
 /* =======================
@@ -248,52 +243,52 @@
 ========================== */
 :root {
     /* Header vertical spacing */
-    --bringer-header-spacing: 16px;
+    --lm-header-spacing: 16px;
 
     /* Main Menu items spacing */
-    --bringer-menu-gap: 32px;
+    --lm-menu-gap: 32px;
 
     /* Sub-menu container width */
-    --bringer-sub-menu-width: 200px;
+    --lm-sub-menu-width: 200px;
 
     /* Social Items list items spacing */
-    --bringer-socials-gap: 32px;
+    --lm-socials-gap: 32px;
 
     /* Section Spacing (Applies at the top and the bottom of each section) */
-    --bringer-section-gap: 128px;
+    --lm-section-gap: 128px;
 
 
     /* Extra Large border radius */
-    --bringer-xl-br: 48px;
+    --lm-xl-br: 48px;
 
     /* Large border radius */
-    --bringer-large-br: 32px;
+    --lm-large-br: 32px;
 
     /* Default border radius */
-    --bringer-default-br: 24px;
+    --lm-default-br: 24px;
 
     /* Small border radius */
-    --bringer-small-br: 16px;
+    --lm-small-br: 16px;
 
     /* Extra small border radius */
-    --bringer-xs-br: 8px;
+    --lm-xs-br: 8px;
 
 
     /* Button padding */
-    --bringer-button-spacing: 13px 24px 14px 24px;
+    --lm-button-spacing: 13px 24px 14px 24px;
 
     /* Button border radius */
-    --bringer-button-br: var(--bringer-xs-br);
+    --lm-button-br: var(--lm-xs-br);
 
 
     /* Input field padding */
-    --bringer-input-spacing: 16px 16px 16px 16px;
+    --lm-input-spacing: 16px 16px 16px 16px;
 
     /* Input field border radius */
-    --bringer-input-br: var(--bringer-xs-br);
+    --lm-input-br: var(--lm-xs-br);
 
     /* Input field bottom margin */
-    --bringer-input-gap: 24px;
+    --lm-input-gap: 24px;
 
     /* Shadow Themes Grid: Container */
     --stg-container-width: 1200px;
@@ -324,30 +319,30 @@
     :root {
         --stg-container-width: 976px;
         
-        --bringer-t-h1-fs: 64px;
-        --bringer-t-h2-fs: 45px;
-        --bringer-t-h3-fs: 32px;
-        --bringer-t-h4-fs: 26px;
-        --bringer-t-h5-fs: 22px;
-        --bringer-t-h6-fs: 18px;
-        --bringer-t-large-fs: 18px;
-        --bringer-t-content-fs: 14px;
-        --bringer-t-footer-fs: 14px;
-        --bringer-t-meta-fs: 10px;
-        --bringer-t-button-fs: 14px;
-        --bringer-t-input-fs: 14px;
+        --lm-t-h1-fs: 64px;
+        --lm-t-h2-fs: 45px;
+        --lm-t-h3-fs: 32px;
+        --lm-t-h4-fs: 26px;
+        --lm-t-h5-fs: 22px;
+        --lm-t-h6-fs: 18px;
+        --lm-t-large-fs: 18px;
+        --lm-t-content-fs: 14px;
+        --lm-t-footer-fs: 14px;
+        --lm-t-meta-fs: 10px;
+        --lm-t-button-fs: 14px;
+        --lm-t-input-fs: 14px;
 
-        --bringer-header-spacing: 12px;
+        --lm-header-spacing: 12px;
 
-        --bringer-menu-gap: 24px;
-        --bringer-socials-gap: 24px;
-        --bringer-section-gap: 96px;
+        --lm-menu-gap: 24px;
+        --lm-socials-gap: 24px;
+        --lm-section-gap: 96px;
 
-        --bringer-xl-br: 36px;
-        --bringer-large-br: 24px;
-        --bringer-default-br: 18px;
-        --bringer-small-br: 12px;
-        --bringer-xs-br: 6px;
+        --lm-xl-br: 36px;
+        --lm-large-br: 24px;
+        --lm-default-br: 18px;
+        --lm-small-br: 12px;
+        --lm-xs-br: 6px;
 
         --stg-gap: 24px;
         --stg-d-gap: 24px;
@@ -356,7 +351,7 @@
         --stg-small-gap: 12px;
         --stg-large-gap: 48px;
         --stg-xl-gap: 96px;
-        --bringer-section-gap: 96px;
+        --lm-section-gap: 96px;
     }
 }
 
@@ -364,37 +359,37 @@
 @media only screen and (max-width: 960px) {
     :root {
         /* Main Menu Font Family */
-        --bringer-t-menu-ff: var(--bringer-t-heading-ff);
+        --lm-t-menu-ff: var(--lm-t-heading-ff);
 
         /* Main Menu Font Weight */
-        --bringer-t-menu-fw: var(--bringer-t-heading-fw);
+        --lm-t-menu-fw: var(--lm-t-heading-fw);
 
         /* Main Menu Font Size */
-        --bringer-t-menu-fs: 32px;
+        --lm-t-menu-fs: 32px;
 
         /* Main Menu Line Heiight */
-        --bringer-t-menu-lh: 1.2em;
+        --lm-t-menu-lh: 1.2em;
 
         /* Sub-Menu Font Family */
-        --bringer-t-submenu-ff: var(--bringer-t-content-ff);
+        --lm-t-submenu-ff: var(--lm-t-content-ff);
 
         /* Main Menu Font Weight */
-        --bringer-t-submenu-fw: var(--bringer-t-content-fw);
+        --lm-t-submenu-fw: var(--lm-t-content-fw);
 
         /* Main Menu Font Size */
-        --bringer-t-submenu-fs: 16px;
+        --lm-t-submenu-fs: 16px;
 
         /* Main Menu Line Heiight */
-        --bringer-t-submenu-lh: 1.4em;
+        --lm-t-submenu-lh: 1.4em;
     }
 }
 
 /* === Tablet: Portrait === */
 @media only screen and (max-width: 960px) {
     :root {
-        --bringer-t-h1-fs: 55px;
+        --lm-t-h1-fs: 55px;
         --stg-container-width: 590px;
-        --bringer-header-spacing: 12px;
+        --lm-header-spacing: 12px;
     }
 }
 
@@ -403,19 +398,19 @@
     :root {
         --stg-container-width: calc( 100svw - 2 * var( --stg-gap ));
 
-        --bringer-t-h1-fs: 48px;
-        --bringer-t-h2-fs: 32px;
-        --bringer-t-h3-fs: 28px;
-        --bringer-t-h4-fs: 24px;
-        --bringer-t-h5-fs: 20px;
-        --bringer-t-h6-fs: 18px;
-        --bringer-t-large-fs: 17px;
+        --lm-t-h1-fs: 48px;
+        --lm-t-h2-fs: 32px;
+        --lm-t-h3-fs: 28px;
+        --lm-t-h4-fs: 24px;
+        --lm-t-h5-fs: 20px;
+        --lm-t-h6-fs: 18px;
+        --lm-t-large-fs: 17px;
 
-        --bringer-xl-br: 32px;
-        --bringer-large-br: 24px;
-        --bringer-default-br: 16px;
-        --bringer-small-br: 8px;
-        --bringer-xs-br: 4px;
+        --lm-xl-br: 32px;
+        --lm-large-br: 24px;
+        --lm-default-br: 16px;
+        --lm-small-br: 8px;
+        --lm-xs-br: 4px;
 
         --stg-gap: 20px;
         --stg-d-gap: 20px;
@@ -424,9 +419,9 @@
         --stg-small-gap: 12px;
         --stg-large-gap: 40px;
         --stg-xl-gap: 80px;
-        --bringer-section-gap: 80px;
+        --lm-section-gap: 80px;
 
-        --bringer-socials-gap: 12px;
+        --lm-socials-gap: 12px;
     }
 }
 

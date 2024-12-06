@@ -5,13 +5,13 @@
  */
 get_header(); ?>
 
-<main id="bringer-main">
+<main id="lm-main">
     <section class="backlight-bottom">
         <div class="stg-row">
             <div class="stg-col-6 stg-offset-3">
                 <div class="align-center">
-                    <h1 class="bringer-page-title in-view" data-unload="fade-up">Events & Seminars</h1>
-                    <p class="bringer-large-text in-view" data-delay="100" data-unload="fade-up">Where Creative Sparks Ignite Branding Revolutions.</p>
+                    <h1 class="lm-page-title in-view" data-unload="fade-up">Events & Seminars</h1>
+                    <p class="lm-large-text in-view" data-delay="100" data-unload="fade-up">Where Creative Sparks Ignite Branding Revolutions.</p>
                 </div>
             </div>
         </div>
@@ -19,9 +19,9 @@ get_header(); ?>
     <!-- Section: Events -->
     <section>
         <div class="stg-container divider stg-top-gap-l">
-            <h3 class="bringer-large-text" data-appear="fade-up" data-unload="fade-up">Upcoming Events</h3>
-            <div class="bringer-detailed-list-wrap">
-                <ul class="bringer-detailed-list">
+            <h3 class="lm-large-text" data-appear="fade-up" data-unload="fade-up">Upcoming Events</h3>
+            <div class="lm-detailed-list-wrap">
+                <ul class="lm-detailed-list">
                     <?php
                     $args = array(
                         'post_type' => 'events',
@@ -40,17 +40,17 @@ get_header(); ?>
                             }
                             ?>
                             <li>
-                                <div class="bringer-detailed-list-title">
+                                <div class="lm-detailed-list-title">
                                     <h4><?php the_title(); ?></h4>
-                                    <div class="bringer-detailed-list-description">
+                                    <div class="lm-detailed-list-description">
                                         <p><?php echo esc_html($event_date); ?></p>
                                     </div>
                                 </div>
-                                <div class="bringer-detailed-list-description">
+                                <div class="lm-detailed-list-description">
                                     <p><?php echo esc_html($event_description); ?></p>
                                 </div>
-                                <div class="bringer-detailed-list-button">
-                                    <span class="bringer-icon bringer-icon-explore"></span>
+                                <div class="lm-detailed-list-button">
+                                    <span class="lm-icon lm-icon-explore"></span>
                                 </div>
                                 <a href="<?php the_permalink(); ?>"></a>
                             </li>

@@ -13,8 +13,8 @@
 .stg-container.is-fullwidth {
     --stg-fw-spacing: calc(0.5 * (100vw - var(--stg-container-width)));
     width: 100%;
-    padding-left: var(--bringer-fw-spacing);
-    padding-right: var(--bringer-fw-spacing);
+    padding-left: var(--lm-fw-spacing);
+    padding-right: var(--lm-fw-spacing);
 }
 .stg-container.is-fullwidth.is-stretched {
     padding-left: 0;
@@ -265,7 +265,7 @@
     margin-bottom: var(--stg-xl-gap);
 }
 .stg-bottom-gap-section {
-    margin-bottom: var(--bringer-section-gap);
+    margin-bottom: var(--lm-section-gap);
 }
 
 .stg-top-gap-xs {
@@ -527,7 +527,7 @@
     }
     .stg-row > div.stg-l-bottom-gap-section,
     .stg-l-bottom-gap-section {
-        margin-bottom: var(--bringer-section-gap);
+        margin-bottom: var(--lm-section-gap);
     }
 
     /* Top Gaps */
@@ -820,7 +820,7 @@
     }
     .stg-row > div.stg-t-bottom-gap-section,
     .stg-t-bottom-gap-section {
-        margin-bottom: var(--bringer-section-gap);
+        margin-bottom: var(--lm-section-gap);
     }
 
     /* Top Gaps */
@@ -1164,7 +1164,7 @@
     }
     .stg-row > div.stg-tp-bottom-gap-section,
     .stg-tp-bottom-gap-section {
-        margin-bottom: var(--bringer-section-gap);
+        margin-bottom: var(--lm-section-gap);
     }
 
     /* Top Gaps */
@@ -1549,7 +1549,7 @@
     }
     .stg-row > div.stg-m-bottom-gap-section,
     .stg-m-bottom-gap-section {
-        margin-bottom: var(--bringer-section-gap);
+        margin-bottom: var(--lm-section-gap);
     }
 
     /* Top Gaps */

@@ -1,8 +1,8 @@
 /* DEV TEMP */
 /* Info Card */
-.bringer-info-card-item {
-    border-radius: var(--bringer-small-br);
-    background: var(--bringer-s-container-bg) bottom right no-repeat;
+.lm-info-card-item {
+    border-radius: var(--lm-small-br);
+    background: var(--lm-s-container-bg) bottom right no-repeat;
     padding: var(--stg-gap);
     position: relative;
     display: grid;
@@ -13,20 +13,20 @@
     --mouse-x: 0;
     --mouse-y: 0;
 }
-.bringer-info-card-number {
+.lm-info-card-number {
     position: absolute;
     right: 16px;
     top: 8px;
     font-size: 5vw;
     letter-spacing: -0.03em;
     line-height: 1;
-    font-family: var(--bringer-t-heading-ff);
-    font-weight: var(--bringer-t-heading-fw);
+    font-family: var(--lm-t-heading-ff);
+    font-weight: var(--lm-t-heading-fw);
     opacity: 0.05;
 }
-.bringer-info-card-item p:last-child {
+.lm-info-card-item p:last-child {
     margin-bottom: -0.15em;
 }
-.bringer-info-card-item h5 {
+.lm-info-card-item h5 {
     margin: -0.25em 0 0 0;
 }

@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-<main id="bringer-main">
+<main id="lm-main">
     <div class="stg-container">
         <!-- Section: Page Title -->
         <section class="backlight-bottom">
@@ -13,7 +13,7 @@ get_header(); ?>
                 <div class="stg-col-6 stg-offset-3">
                     <div class="align-center">
                         <!-- Update the title to display the category name -->
-                        <h1 class="bringer-page-title" data-appear="fade-up" data-unload="fade-up">
+                        <h1 class="lm-page-title" data-appear="fade-up" data-unload="fade-up">
                             <?php 
                             if (is_category()) {
                                 single_cat_title('Category: ', true); // Display current category title
@@ -22,7 +22,7 @@ get_header(); ?>
                             }
                             ?>
                         </h1>
-                        <p class="bringer-large-text" data-appear="fade-up" data-delay="100" data-unload="fade-up">
+                        <p class="lm-large-text" data-appear="fade-up" data-delay="100" data-unload="fade-up">
                             <?php
                             if (is_category()) {
                                 echo 'Explore articles from the "' . single_cat_title('', false) . '" category.';
@@ -39,7 +39,7 @@ get_header(); ?>
         <!-- Section: Grid -->
         <section>
             <!-- Portfolio Grid -->
-            <div class="bringer-grid-3cols bringer-tp-grid-2cols bringer-tp-centered-last-item stg-normal-gap bringer-parallax-media " data-stagger-appear="fade-up" data-threshold="0.5" data-stagger-delay="150" data-stagger-unload="fade-up">
+            <div class="lm-grid-3cols lm-tp-grid-2cols lm-tp-centered-last-item stg-normal-gap lm-parallax-media " data-stagger-appear="fade-up" data-threshold="0.5" data-stagger-delay="150" data-stagger-unload="fade-up">
                 
                 <?php
                 // WP Query to fetch posts for the current category
@@ -62,24 +62,24 @@ get_header(); ?>
                 ?>
                 
                 <!-- Portfolio Card Item -->
-                <div class="bringer-block bringer-portfolio-card">
-                    <div class="bringer-portfolio-card-image">
+                <div class="lm-block lm-portfolio-card">
+                    <div class="lm-portfolio-card-image">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img class="bringer-lazy" src="img/null.png" data-src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" width="1200" height="1200">
+                            <img class="lm-lazy" src="img/null.png" data-src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" width="1200" height="1200">
                         <?php else : ?>
-                            <img class="bringer-lazy" src="img/null.png" data-src="path/to/default-image.jpg" alt="Default image" width="1200" height="1200">
+                            <img class="lm-lazy" src="img/null.png" data-src="path/to/default-image.jpg" alt="Default image" width="1200" height="1200">
                         <?php endif; ?>
                     </div>
-                    <div class="bringer-portfolio-card-footer">
-                        <div class="bringer-portfolio-card-title">
-                            <span class="bringer-meta"><?php the_category(', '); ?></span>
+                    <div class="lm-portfolio-card-footer">
+                        <div class="lm-portfolio-card-title">
+                            <span class="lm-meta"><?php the_category(', '); ?></span>
                             <h6><?php the_title(); ?></h6>
-                            <span class="bringer-meta"><?php the_date(); ?></span> <!-- Display date -->
+                            <span class="lm-meta"><?php the_date(); ?></span> <!-- Display date -->
                         </div>
-                        <span class="bringer-icon bringer-icon-explore"></span>
+                        <span class="lm-icon lm-icon-explore"></span>
                     </div>
                     <a href="<?php the_permalink(); ?>"></a>
-                </div><!-- .bringer-portfolio-card -->
+                </div><!-- .lm-portfolio-card -->
                 
                 <?php
                     endwhile;
@@ -89,7 +89,7 @@ get_header(); ?>
                     <p>No articles found.</p>
                 <?php endif; ?>
 
-            </div><!-- .bringer-grid -->
+            </div><!-- .lm-grid -->
         </section>
     </div>
 </main>

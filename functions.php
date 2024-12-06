@@ -25,7 +25,7 @@ function register_my_menus() {
 }
 add_action('after_setup_theme', 'register_my_menus');
 
-class WP_Bringer_Nav_Walker extends Walker_Nav_Menu {
+class WP_lm_Nav_Walker extends Walker_Nav_Menu {
     function start_lvl( &$output, $depth = 0, $args = null ) {
         $classes = empty( $classes ) ? array() : (array) $classes;
         $classes[] = 'sub-menu';
@@ -86,11 +86,11 @@ function theme_setup() {
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
-function bringer_customize_register( $wp_customize ) {
+function lm_customize_register( $wp_customize ) {
 
     // Add a new section for social media settings
-    $wp_customize->add_section( 'bringer_social_media', array(
-        'title'    => __( 'Social Media Links', 'bringer' ),
+    $wp_customize->add_section( 'lm_social_media', array(
+        'title'    => __( 'Social Media Links', 'lm' ),
         'priority' => 40, // Position in the Customizer
     ) );
 
@@ -116,36 +116,36 @@ function bringer_customize_register( $wp_customize ) {
     // Create settings and controls for each social media platform
     foreach ( $socials as $social => $name ) {
         // Add setting for social media URL
-        $wp_customize->add_setting( "bringer_social_{$social}_url", array(
+        $wp_customize->add_setting( "lm_social_{$social}_url", array(
             'default'   => '',
             'transport' => 'refresh',
         ) );
 
         // Add setting for enabling/disabling social media icon
-        $wp_customize->add_setting( "bringer_social_{$social}_enabled", array(
+        $wp_customize->add_setting( "lm_social_{$social}_enabled", array(
             'default'   => false,
             'transport' => 'refresh',
         ) );
 
         // Add control for URL
-        $wp_customize->add_control( "bringer_social_{$social}_url", array(
-            'label'    => sprintf( __( '%s URL', 'bringer' ), $name ),
-            'section'  => 'bringer_social_media',
+        $wp_customize->add_control( "lm_social_{$social}_url", array(
+            'label'    => sprintf( __( '%s URL', 'lm' ), $name ),
+            'section'  => 'lm_social_media',
             'type'     => 'url',
-            'description' => sprintf( __( 'Enter the URL for your %s profile.', 'bringer' ), $name ),
+            'description' => sprintf( __( 'Enter the URL for your %s profile.', 'lm' ), $name ),
         ) );
 
         // Add control for enabling/disabling the icon
-        $wp_customize->add_control( "bringer_social_{$social}_enabled", array(
-            'label'    => sprintf( __( 'Enable %s Icon', 'bringer' ), $name ),
-            'section'  => 'bringer_social_media',
+        $wp_customize->add_control( "lm_social_{$social}_enabled", array(
+            'label'    => sprintf( __( 'Enable %s Icon', 'lm' ), $name ),
+            'section'  => 'lm_social_media',
             'type'     => 'checkbox',
-            'description' => sprintf( __( 'Check this box to display the %s icon.', 'bringer' ), $name ),
+            'description' => sprintf( __( 'Check this box to display the %s icon.', 'lm' ), $name ),
         ) );
     }
 
 }
-add_action( 'customize_register', 'bringer_customize_register' );
+add_action( 'customize_register', 'lm_customize_register' );
 
 function my_theme_register_menus() {
     register_nav_menus( array(

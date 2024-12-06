@@ -2,7 +2,7 @@
 get_header(); // Load the header
 ?>
 
-<main id="bringer-main">
+<main id="lm-main">
     <div class="stg-container">
 
         <?php if ( have_posts() ) : // Start the loop ?>
@@ -11,8 +11,8 @@ get_header(); // Load the header
                 <div class="stg-row">
                     <div class="stg-col-6 stg-offset-3">
                         <div class="align-center">
-                            <h1 class="bringer-page-title in-view" data-unload="fade-up"><?php the_title(); ?></h1>
-                            <p class="bringer-large-text in-view" data-delay="100" data-unload="fade-up"><?php echo get_the_date(); ?></p>
+                            <h1 class="lm-page-title in-view" data-unload="fade-up"><?php the_title(); ?></h1>
+                            <p class="lm-large-text in-view" data-delay="100" data-unload="fade-up"><?php echo get_the_date(); ?></p>
                         </div>
                     </div>
                 </div>

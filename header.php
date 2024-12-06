@@ -23,11 +23,11 @@
 </head>
 <body <?php body_class(); ?>>
     <!-- Header -->
-    <header id="bringer-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
+    <header id="lm-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
         <!-- Desktop Header -->
-        <div class="bringer-header-inner">
-            <div class="bringer-header-lp stg-large-gap">
-                <a href="<?php echo home_url(); ?>" class="bringer-logo stg-row stg-gap-5">
+        <div class="lm-header-inner">
+            <div class="lm-header-lp stg-large-gap">
+                <a href="<?php echo home_url(); ?>" class="lm-logo stg-row stg-gap-5">
                     <?php 
                     // Display custom logo if set
                     if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
@@ -41,23 +41,23 @@
                 
             </div>
             <!-- Main Menu -->
-            <div class="bringer-header-mp">
-                <nav class="bringer-nav">
+            <div class="lm-header-mp">
+                <nav class="lm-nav">
                     <?php
                     // Display the primary menu with the custom walker
                     wp_nav_menu( array(
                         'theme_location' => 'primary',
                         'menu_class'      => 'main-menu',
                         'container'       => false,
-                        'walker'           => new WP_Bringer_Nav_Walker(),
+                        'walker'           => new WP_lm_Nav_Walker(),
                     ) );
                     ?>
                 </nav>
             </div>
         </div>
         <!-- Mobile Header -->
-        <div class="bringer-mobile-header-inner">
-            <a href="<?php echo home_url(); ?>" class="bringer-logo">
+        <div class="lm-mobile-header-inner">
+            <a href="<?php echo home_url(); ?>" class="lm-logo">
                 <?php 
                 if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
                     the_custom_logo();
@@ -66,8 +66,8 @@
                 endif;
                 ?>
             </a>
-            <a href="#" class="bringer-mobile-menu-toggler">
-                <i class="bringer-menu-toggler-icon">
+            <a href="#" class="lm-mobile-menu-toggler">
+                <i class="lm-menu-toggler-icon">
                     <span></span>
                     <span></span>
                     <span></span>

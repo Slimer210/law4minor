@@ -1,11 +1,7 @@
-/**
- * Author: Shadow Themes
- * Author URL: https://shadow-themes.com
- */
 "use strict";
 
 /* --- Class: Before and After --- */
-class Bringer_Before_After {
+class LM_Before_After {
 	constructor( $obj = null ) {
         if ( $obj === null ) {
             console.warn('Before After: Item is not specified');
@@ -23,9 +19,9 @@ class Bringer_Before_After {
 
         this.$el = {
             $wrap: $obj,
-            $before : jQuery('<div class="bringer-before-after-img bringer-before-img"/>').appendTo($obj),
-            $after : jQuery('<div class="bringer-before-after-img bringer-after-img-wrap"/>').appendTo($obj),
-            $divider : jQuery('<div class="bringer-before-after-divider">\
+            $before : jQuery('<div class="lm-before-after-img lm-before-img"/>').appendTo($obj),
+            $after : jQuery('<div class="lm-before-after-img lm-after-img-wrap"/>').appendTo($obj),
+            $divider : jQuery('<div class="lm-before-after-divider">\
                 <svg xmlns="http://www.w3.org/2000/svg" width="23.813" height="13.875" viewBox="0 0 23.813 13.875">\
                     <path d="M-5.062-15.937l1.125,1.125L-9.047-9.75H9.047L3.938-14.812l1.125-1.125,6.375,6.375L11.906-9l-.469.563L5.063-2.062,3.938-3.187,9.047-8.25H-9.047l5.109,5.063L-5.062-2.062l-6.375-6.375L-11.906-9l.469-.562Z" transform="translate(11.906 15.938)" fill="#fff"/>\
                 </svg>\
@@ -40,8 +36,8 @@ class Bringer_Before_After {
         this.isHover = false;
 
         this.$el.$before.css('background-image', 'url('+ this.$el.$wrap.attr('data-img-before') +')');
-        this.$el.$after.children('img').wrap('<div class="bringer-after-img"/>');
-        this.$el.$after.children('.bringer-after-img').css('background-image', 'url('+ this.$el.$wrap.attr('data-img-after') +')');
+        this.$el.$after.children('img').wrap('<div class="lm-after-img"/>');
+        this.$el.$after.children('.lm-after-img').css('background-image', 'url('+ this.$el.$wrap.attr('data-img-after') +')');
 
         // Mouse Events
         this.$el.$wrap.on('mousedown', function(e) {
@@ -113,7 +109,7 @@ class Bringer_Before_After {
 	layout() {
 		this.offset = this.$el.$wrap.offset().left;
 		this.size = this.$el.$wrap.width();
-		this.$el.$after.children('.bringer-after-img').width( this.$el.$wrap.width() ).height( this.$el.$wrap.height() );
+		this.$el.$after.children('.lm-after-img').width( this.$el.$wrap.width() ).height( this.$el.$wrap.height() );
 	}
 	reset() {
 		this.current = 50;
@@ -127,7 +123,7 @@ class Bringer_Before_After {
 }
 
 /* --- Class: Pan Axis Class --- */
-class Bringer_PanAxis {
+class LM_PanAxis {
     constructor( sens ) {
         let _self = this;
         this.xs = 0;
@@ -177,10 +173,10 @@ class Bringer_PanAxis {
         return this.ax;
     }
 }
-const baw_axis = new Bringer_PanAxis( 10 );
+const baw_axis = new LM_PanAxis( 10 );
 
 /* --- Class: Main Menu --- */
-class Bringer_Menu {
+class LM_Menu {
     constructor( _core = null ) {
         const _self = this;
         
@@ -199,7 +195,7 @@ class Bringer_Menu {
         }
 
         // Main Menu Active Indicator
-        this.core.$dom.header.append('<span class="bringer-active-menu-ind"></span>');
+        this.core.$dom.header.append('<span class="lm-active-menu-ind"></span>');
 
         // Add "has-children"
         this.$main.find('li').each(function() {
@@ -217,7 +213,7 @@ class Bringer_Menu {
             .on('load', this.layout());
 
         // Create Mobile Menu
-        this.mobile_menu = new Bringer_Mobile_Menu( this.$nav );
+        this.mobile_menu = new LM_Mobile_Menu( this.$nav );
     }
     layout() {
         const _self = this;
@@ -251,7 +247,7 @@ class Bringer_Menu {
 }
 
 /* --- Class: Mobile Menu --- */
-class Bringer_Mobile_Menu {
+class LM_Mobile_Menu {
     constructor( $obj )  {
         const _self = this;
         
@@ -266,15 +262,15 @@ class Bringer_Mobile_Menu {
             return false;
         }
         this.$body = jQuery('body');
-        this.$nav = jQuery('<nav class="bringer-mobile-nav"/>').appendTo(this.$body);
+        this.$nav = jQuery('<nav class="lm-mobile-nav"/>').appendTo(this.$body);
         if ( this.$el.parents('header').hasClass('is-frosted') ) {
             this.$nav.addClass('is-frosted');
         }
-        this.$menu = jQuery('<ul class="bringer-mobile-menu"/>').appendTo(this.$nav);
+        this.$menu = jQuery('<ul class="lm-mobile-menu"/>').appendTo(this.$nav);
         this.$el.children('ul').children().each(function() {
             jQuery(this).clone().appendTo(_self.$menu);
         });
-        this.$overlay = jQuery('<div class="bringer-mobile-menu-overlay"/>').appendTo(this.$body);
+        this.$overlay = jQuery('<div class="lm-mobile-menu-overlay"/>').appendTo(this.$body);
         this.$menu.find('a[href="#"]').each(function() {
             this.setAttribute('href', 'javascript:void(0)');
             this.addEventListener('click', (e) => {
@@ -285,7 +281,7 @@ class Bringer_Mobile_Menu {
         });
 
         // Events
-        jQuery('.bringer-mobile-menu-toggler').on('click', function() {
+        jQuery('.lm-mobile-menu-toggler').on('click', function() {
             _self.$body.toggleClass('show-menu');
         });
         this.$overlay.on('click', function() {
@@ -295,7 +291,7 @@ class Bringer_Mobile_Menu {
 }
 
 /* --- Class: Infinite List --- */
-class Bringer_Infinite_List {
+class LM_Infinite_List {
     constructor( $obj = null, cfg = {} )  {
         if ( $obj === null ) {
             return false;
@@ -350,21 +346,21 @@ class Bringer_Infinite_List {
             });
         }
         // Hover Event
-        this.$el.on('mouseenter', '.bringer-infinite-list-item', function() {
+        this.$el.on('mouseenter', '.lm-infinite-list-item', function() {
             _self.$el.addClass('is-hovererd');
             let $preview = _self.$bg_wrap.children('[data-id="'+ this.getAttribute('data-id') +'"]');
             _self.$bg_wrap.children('.is-active').removeClass('is-active');
             $preview.addClass('is-active');
             if ('video' === $preview.attr('data-type') ) {
-                jQuery(this).children('.bringer-infinite-list-preview').children('video')[0].play();
+                jQuery(this).children('.lm-infinite-list-preview').children('video')[0].play();
                 $preview.children('video')[0].play();
             }
-        }).on('mouseleave', '.bringer-infinite-list-item', function() {
+        }).on('mouseleave', '.lm-infinite-list-item', function() {
             _self.$el.removeClass('is-hovererd');
             let $preview = _self.$bg_wrap.children('[data-id="'+ this.getAttribute('data-id') +'"]');
             //$preview.removeClass('is-active');
             if ('video' === $preview.attr('data-type') ) {
-                jQuery(this).children('.bringer-infinite-list-preview').children('video')[0].pause();
+                jQuery(this).children('.lm-infinite-list-preview').children('video')[0].pause();
                 $preview.children('video')[0].pause();
             }
         });
@@ -421,10 +417,10 @@ class Bringer_Infinite_List {
         this.touchPoint = 0;
 
         // DOM
-        this.$list = this.$el.children('.bringer-infinite-list');
-        this.$bg_wrap = jQuery('<div class="bringer-infinite-list-bgs"/>').appendTo(this.$el);
-        this.$scroll = jQuery('<div class="bringer-infinite-scroll"/>').appendTo(this.$el);
-        this.$cloned_list = jQuery('<div class="bringer-infinite-scroll-inner"/>').appendTo(this.$scroll);
+        this.$list = this.$el.children('.lm-infinite-list');
+        this.$bg_wrap = jQuery('<div class="lm-infinite-list-bgs"/>').appendTo(this.$el);
+        this.$scroll = jQuery('<div class="lm-infinite-scroll"/>').appendTo(this.$el);
+        this.$cloned_list = jQuery('<div class="lm-infinite-scroll-inner"/>').appendTo(this.$scroll);
         this.first_circle = true;
         this.clone_items();
 
@@ -438,7 +434,7 @@ class Bringer_Infinite_List {
             $cloned.attr('data-id', i);
             _self.$cloned_list.append($cloned);
             if ( _self.first_circle ) {
-                let $preview = $cloned.children('.bringer-infinite-list-preview');
+                let $preview = $cloned.children('.lm-infinite-list-preview');
                 let type = $preview.children('video').length ? 'video' : 'img';
                 let this_src = $preview.children(type).attr('src');
                 if ( 'video' === type ) {
@@ -453,12 +449,12 @@ class Bringer_Infinite_List {
                         $video.attr('loop', 'true');
                     }
                     _self.$bg_wrap.append(`
-                    <div class="bringerl-bg-preview-item${(i === 0 ? ' is-active':'')}" data-type="video" data-id="${i}" style="background-image:url(${this_src})">
+                    <div class="lml-bg-preview-item${(i === 0 ? ' is-active':'')}" data-type="video" data-id="${i}" style="background-image:url(${this_src})">
                         <video src="${this_src}" webkit-playsinline="true" playsinline="true" muted loop></video>
                     </div>`);
                 } else {
                     $preview.css('background-image', 'url('+ this_src + ')');
-                    _self.$bg_wrap.append(`<div class="bringerl-bg-preview-item${(i === 0 ? ' is-active':'')}" data-type="image" data-id="${i}" style="background-image:url(${this_src})"/>`);
+                    _self.$bg_wrap.append(`<div class="lml-bg-preview-item${(i === 0 ? ' is-active':'')}" data-type="image" data-id="${i}" style="background-image:url(${this_src})"/>`);
                 }
             }
         });
@@ -527,7 +523,7 @@ class Bringer_Infinite_List {
 }
 
 /* --- Class: Animated Marquee --- */
-class Bringer_Marquee {
+class LM_Marquee {
     constructor( $obj = null )  {
         if ( $obj === null ) {
             return false;
@@ -543,9 +539,9 @@ class Bringer_Marquee {
         this.init_speed = this.$marquee.attr('data-type') !== undefined ? parseInt(this.$marquee.attr('data-speed'), 10) : 5000;
         this.speed = this.init_speed;
         
-        this.$inner = this.$marquee.children('.bringer-marquee-inner');
+        this.$inner = this.$marquee.children('.lm-marquee-inner');
         this.$content = this.$inner.children();
-        this.width = this.$inner.find('.bringer-marquee-list').width();
+        this.width = this.$inner.find('.lm-marquee-list').width();
 
         if ( this.$inner.width() < this.$marquee.width() ) {
             this.duplicate();
@@ -554,8 +550,8 @@ class Bringer_Marquee {
         }
     }
     init() {
-        this.$inner.wrapInner('<div class="bringer-marquee-inner-wrap"/>');
-        this.$inner_cont = this.$inner.children('.bringer-marquee-inner-wrap');
+        this.$inner.wrapInner('<div class="lm-marquee-inner-wrap"/>');
+        this.$inner_cont = this.$inner.children('.lm-marquee-inner-wrap');
         this.$inner.append( this.$inner_cont.clone() );
         this.start();
     }
@@ -578,7 +574,7 @@ class Bringer_Marquee {
 }
 
 /* --- Class: Masked Block --- */
-class Bringer_Masked {
+class LM_Masked {
     constructor( $obj = null, cfg = {} ) {
         if ( $obj === null ) {
             console.warn('Masked Shape: Item is not specified');
@@ -596,8 +592,8 @@ class Bringer_Masked {
 
         // Options
         this.cfg = Object.assign({
-            media_selector: '.bringer-masked-media',
-            content_selector: '.bringer-masked-content',
+            media_selector: '.lm-masked-media',
+            content_selector: '.lm-masked-content',
             dbr: 24,
             ibr: 32
         }, cfg);
@@ -858,7 +854,7 @@ class Bringer_Masked {
     }
 }
 
-class Bringer_LWP {
+class LM_LWP {
     constructor( $obj = null )  {
         if ( $obj === null ) {
             return false;
@@ -872,12 +868,12 @@ class Bringer_LWP {
         }
 
         this.$list = this.$el.children();
-        this.$media = jQuery('<div class="bringer-lwp-media" data-appear="fade-right"/>').prependTo(this.$el);
-        this.count = this.$list.children('.bringer-lwp-item').length;
+        this.$media = jQuery('<div class="lm-lwp-media" data-appear="fade-right"/>').prependTo(this.$el);
+        this.count = this.$list.children('.lm-lwp-item').length;
         this.active = 0;
         this.prev = 1;
 
-        this.$list.children('.bringer-lwp-item').each(function(i) {
+        this.$list.children('.lm-lwp-item').each(function(i) {
             let $item = jQuery(this),
                 $img = $item.children('img').clone(),
                 idx = _self.count - i;
