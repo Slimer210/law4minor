@@ -193,5 +193,26 @@ function custom_team_member_query_vars($query_vars) {
 }
 add_filter('query_vars', 'custom_team_member_query_vars');
 
+function custom_articles_search_rewrite_rule() {
+    if (isset($_GET['s']) && !empty($_GET['s'])) {
+        add_rewrite_rule(
+            '^articles/?$', // Match the /articles base path
+            'index.php?s=' . sanitize_text_field($_GET['s']), // Safely pass the search query `s`
+            'top'
+        );
+    }
+}
+add_action('init', 'custom_articles_search_rewrite_rule');
+
+
+function modify_search_query($query) {
+    if ($query->is_search && !is_admin() && $query->get('s')) {
+        // Ensure the search is limited to the 'articles' post type
+        $query->set('post_type', 'article'); // Change 'article' to your custom post type slug
+    }
+}
+add_filter('pre_get_posts', 'modify_search_query');
+
+
 add_theme_support( 'post-thumbnails' );
 

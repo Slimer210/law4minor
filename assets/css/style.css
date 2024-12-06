@@ -101,6 +101,8 @@ Table of Contents
     12.2 - Entrance Animations
 
 13. ARTICLES
+
+14. Search Bar
     
 ====================================== */
 
@@ -4483,3 +4485,41 @@ button.pswp__button.bringer-pswp-next::after {
     display: table;
   }
   
+
+/** ==============
+    14. Search Bar
+    ============== */
+
+    .stg-search-bar {
+        width: 100%; /* Makes the search bar take the full width of the page */
+        padding: 10px 20px; /* Padding inside the search bar for spacing */
+        z-index: 9999; /* Ensures it appears on top of other elements */
+        display: flex; /* Aligns children elements (input and button) horizontally */
+        justify-content: center; /* Centers the search bar content */
+    }
+    
+    .stg-search-bar form {
+        display: flex; /* Flexbox for inline input and button */
+        width: 100%; /* Make the form span the entire width of the container */
+        max-width: 600px; /* Optional: Limit the maximum width */
+    }
+    
+    .stg-search-bar input[type="text"] {
+        flex: 1; /* Makes the input field take up remaining space */
+        padding: 10px; /* Padding inside the input field */
+        font-size: 16px; /* Font size of the input */
+        border-radius: 8px 0 0 8px; /* Rounded corners for the left side */
+        height: 100%; 
+    }
+    
+    .stg-search-bar button {
+        padding: 10px 20px; /* Padding inside the button */
+
+        color: white; /* Text color for the button */
+        font-size: 16px; /* Button text size */
+        border: 1px solid #0073e6; /* Border matching the button color */
+        border-radius: 0 8px 8px 0; /* Rounded corners for the right side */
+        cursor: pointer; /* Pointer cursor on hover */
+        height: 100%; 
+    }
+    

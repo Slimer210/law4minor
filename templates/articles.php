@@ -17,12 +17,20 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            <div class="stg-row align-center stg-top-gap stg-search-bar" data-appear="fade-up" data-delay="150" data-unload="fade-up">
+                <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" class="stg-row align-center">
+                    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search post..." class="stg-col-5">
+                    <button type="submit" id="searchsubmit">Search</button>
+                </form>
+            </div>
         </section>
         
         <!-- Section: Grid -->
         <section>
+            <h3 data-appear="fade-up" data-delay="200" data-unload="fade-up">All Articles</h3>
+            
             <!-- Portfolio Grid -->
-            <div class="bringer-grid-3cols bringer-tp-grid-2cols bringer-tp-centered-last-item stg-normal-gap bringer-parallax-media " data-stagger-appear="fade-up" data-threshold="0.5" data-stagger-delay="150" data-stagger-unload="fade-up">
+            <div class="bringer-grid-3cols bringer-tp-grid-2cols bringer-tp-centered-last-item stg-normal-gap bringer-parallax-media " data-threshold="0.5"  data-appear="fade-up" data-delay="150" data-unload="fade-up">
                 
                 <?php
                 // WP Query to fetch latest posts

@@ -23,20 +23,17 @@ get_header(); ?>
             <div class="bringer-detailed-list-wrap">
                 <ul class="bringer-detailed-list">
                     <?php
-                    // Query the 'events' post type
                     $args = array(
                         'post_type' => 'events',
-                        'posts_per_page' => 5, // Limit to 5 events, adjust as needed
-                        'orderby' => 'date', // Sort by date
-                        'order' => 'ASC', // Sort in ascending order (earliest events first)
+                        'posts_per_page' => -1,
+                        'orderby' => 'date',
+                        'order' => 'DESC',
                     );
                     $events_query = new WP_Query($args);
 
                     if ($events_query->have_posts()) :
                         while ($events_query->have_posts()) : $events_query->the_post();
-                            // Get event date (assuming custom field 'event_date' is used)
                             $event_date = get_post_meta(get_the_ID(), 'date', true);
-                            // Get event description (use post content or a custom field)
                             $event_description = get_post_meta(get_the_ID(), 'description', true);
                             if (empty($event_description)) {
                                 $event_description = wp_trim_words(get_the_content(), 20); // Fallback to post content if no custom description
@@ -59,7 +56,7 @@ get_header(); ?>
                             </li>
                         <?php
                         endwhile;
-                        wp_reset_postdata(); // Reset post data after custom query
+                        wp_reset_postdata();
                     else :
                         echo '<p>No upcoming events found.</p>';
                     endif;
