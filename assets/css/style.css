@@ -1265,6 +1265,13 @@ section.backlight-top:last-child::before {
     list-style: none;
 }
 
+
+.lm-title-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: #fff; /* You can adjust the color */
+}
 /* Widget: Info */
 .lm-info-widget {
     display: flex;
@@ -3641,7 +3648,7 @@ body:has(.lm-infinite-list) .lm-backlight {
     max-width: 50%;
 }
 .lm-grid-cta-media {
-    padding: var(--stg-large-gap);
+    padding: var(--stg-medium-gap);
     position: absolute;
     left: 0;
     top: 0;
@@ -3679,6 +3686,12 @@ body:has(.lm-infinite-list) .lm-backlight {
     letter-spacing: var(--lm-t-h1-ls);
     line-height: var(--lm-t-h1-lh);
     margin: var(--lm-t-h1-margin);
+}
+
+@media only screen and (max-width: 739px) {
+    .lm-grid-cta-heading {
+        text-align: center;
+    }
 }
 
 /* === CTA with Image === */

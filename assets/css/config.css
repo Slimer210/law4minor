@@ -293,6 +293,8 @@
     /* Shadow Themes Grid: Container */
     --stg-container-width: 1200px;
 
+    --stg-container-height: 100px;
+
     /* Shadow Themes Grid: Default Gap */
     --stg-gap: 32px;
     --stg-d-gap: 32px;

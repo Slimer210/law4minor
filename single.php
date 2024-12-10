@@ -68,7 +68,7 @@ get_header(); // Load the header
                     <div class="align-center" data-unload="zoom-in">
                         <a href="<?php echo esc_url($previous_post_url); ?>" class="lm-icon-link lm-next-post stg-col">
                             <div class="lm-icon-link-content">
-                                <h6>Previous Project</h6>
+                                <h6>Previous Post</h6>
                                 <h4><?php echo esc_html($previous_post_title); ?></h4>
                             </div>
                             <div>
@@ -86,7 +86,7 @@ get_header(); // Load the header
                         <div class="align-center" data-unload="zoom-in">
                             <a href="<?php echo esc_url($next_post_url); ?>" class="lm-icon-link lm-next-post">
                                 <div class="lm-icon-link-content">
-                                    <h6>Next Project</h6>
+                                    <h6>Next Post</h6>
                                     <h4><?php echo esc_html($next_post_title); ?></h4>
                                 </div>
                                 <div >

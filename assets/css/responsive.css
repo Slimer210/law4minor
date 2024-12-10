@@ -1206,10 +1206,7 @@
         grid-template-rows: repeat(4, auto);
     }
     .lm-bento-grid .is-large {
-        min-height: var(--stg-container-width);
-    }
-    .lm-grid-cta .is-medium {
-        aspect-ratio: 2;
+        min-height: var(--stg-container-height);
     }
     .lm-bento-grid .is-small:has(.lm-meta-list) {
         max-height: fit-content;

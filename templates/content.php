@@ -73,7 +73,7 @@
                     <div class="stg-col-8 stg-offset-2">
                         <div class="align-center">
                             <h2 data-appear="fade-up" data-unload="fade-up">Our Programs & Resources</h2>
-                            <p class="lm-large-text" data-appear="fade-up" data-unload="fade-up" data-delay="100">We offer a wide range of creative services to help businesses of all sizes achieve their goals. Our services include:</p>
+                            <p class="lm-large-text" data-appear="fade-up" data-unload="fade-up" data-delay="100">We offer a wide range of assistances to help youth of all ages. Our programs include:</p>
                         </div>
                     </div>
                 </div>
@@ -123,33 +123,30 @@
             <section>
                 <div class="lm-bento-grid lm-grid-cta">
                     <div class="is-large lm-masked-block in-view" data-unload="fade-left">
-                        
-                        <div class="lm-grid-cta-media lm-masked-media is-init" style="clip-path: url(&quot;#mask_9kny1zwf3&quot;);">
+                        <div class="lm-grid-cta-media lm-masked-media is-init">
                             <div class="lm-grid-cta-heading">Recognitions & Partnerships</div>
                         </div>
-                        <div class="lm-masked-content at-bottom-right">
-                            <p class="lm-large-text in-view" data-delay="100">See Our Efforts Towards UN SGD's Goals →</p>
-                        </div>
-                    <svg width="0" height="0" style="position: absolute; left: 0px; top: 0px; pointer-events: none; opacity: 0;">
-            <defs>
-                <clipPath id="mask_9kny1zwf3">
-                    <path d="
-                M0,24 
-                a24,24 0 0 1 24,-24 
-                L560,0 
-                a24,24 0 0 1 24,24 
-                L584,466.4 
-                a24,24 0 0 1 -24,24 
-                L403.6,490.4 
-                a24,24 0 0 0 -24,24 
-                L379.6,560 
-                a24,24 0 0 1 -24,24 
-                L24,584 
-                a24,24 0 0 1 -24,-24 
-                Z"></path>
-                </clipPath>
-            </defs>
-        </svg></div>
+                        <svg width="0" height="0" style="position: absolute; left: 0px; top: 0px; pointer-events: none; opacity: 0;">
+                            <defs>
+                                <clipPath id="mask_9kny1zwf3">
+                                    <path d="
+                                M0,24 
+                                a24,24 0 0 1 24,-24 
+                                L560,0 
+                                a24,24 0 0 1 24,24 
+                                L584,466.4 
+                                a24,24 0 0 1 -24,24 
+                                L403.6,490.4 
+                                a24,24 0 0 0 -24,24 
+                                L379.6,560 
+                                a24,24 0 0 1 -24,24 
+                                L24,584 
+                                a24,24 0 0 1 -24,-24 
+                                Z"></path>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
                     <div class="is-medium lm-block in-view" data-unload="fade-right" style="--mouse-x: -429px; --mouse-y: 301.26666259765625px;">
                         <p class="lm-large-text">Our initiative aligns with the UN’s Sustainable Development Goal 16: Peace, Justice, and Strong Institutions. We are actively working with the Ministry of Education (MOE) and other public sector entities to ensure that our programs are effective, sustainable, and far-reaching.</p>
                     </div>

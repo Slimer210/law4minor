@@ -27,18 +27,18 @@
         <!-- Desktop Header -->
         <div class="lm-header-inner">
             <div class="lm-header-lp stg-large-gap">
-                <a href="<?php echo home_url(); ?>" class="lm-logo stg-row stg-gap-5">
+                <a href="<?php echo home_url(); ?>" class="lm-logo stg-row stg-gap-5" style="display: flex; align-items: center;">
                     <?php 
-                    // Display custom logo if set
+                    // custom logo
                     if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
                         the_custom_logo();
                     else :
-                        // Fallback logo if no custom logo is set
+                        // Fallback logo
                         echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/logo.png' ) . '" alt="' . get_bloginfo( 'name' ) . '" width="32" height="32">';
                     endif;
                     ?>
+                    <span class="lm-title-text" style="font-size: 20px; font-weight: bold; padding-left: 10px;"><?php bloginfo( 'name' ); ?></span>
                 </a>
-                
             </div>
             <!-- Main Menu -->
             <div class="lm-header-mp">
@@ -57,15 +57,21 @@
         </div>
         <!-- Mobile Header -->
         <div class="lm-mobile-header-inner">
-            <a href="<?php echo home_url(); ?>" class="lm-logo">
-                <?php 
-                if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
-                    the_custom_logo();
-                else :
-                    echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/logo.png' ) . '" alt="' . get_bloginfo( 'name' ) . '" width="32" height="32">';
-                endif;
-                ?>
-            </a>
+            <div>
+                <a href="<?php echo home_url(); ?>" class="lm-logo stg-row stg-gap-5" style="display: flex; align-items: center;">
+                    <?php 
+                    // custom logo
+                    if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
+                        the_custom_logo();
+                    else :
+                        // Fallback logo
+                        echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/logo.png' ) . '" alt="' . get_bloginfo( 'name' ) . '" width="32" height="32">';
+                    endif;
+                    ?>
+                    <span class="lm-title-text" style="font-size: 20px; font-weight: bold; padding-left: 10px;"><?php bloginfo( 'name' ); ?></span>
+                </a>
+            </div>
+
             <a href="#" class="lm-mobile-menu-toggler">
                 <i class="lm-menu-toggler-icon">
                     <span></span>
@@ -75,3 +81,5 @@
             </a>
         </div>
     </header>
+
+
